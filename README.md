@@ -29,7 +29,7 @@ module.exports = {
 If you are using the Serverless Framework, the following is an example of the `serverless.yml` configuration. It creates the SQS queue and sets it as the Dead Letter Queue for the Lambda function. This example has all the relevant Serverless Framework configuration to do that.
 
 ```yaml
-functions
+functions:
   original:
     handler: handler.original
     onError: !GetAtt dlq.Arn
