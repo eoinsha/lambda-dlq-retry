@@ -18,7 +18,9 @@
   ],
   "author": "Eoin Shanaghy <eoin.shanaghy@fourtheorem.com",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "once": "^1.4.0"
+  },
   "peedDependencies": {
     "aws-sdk": "*"
   },
