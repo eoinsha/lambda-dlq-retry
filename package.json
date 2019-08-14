@@ -1,0 +1,26 @@
+{
+  "name": "lambda-dlq-retry",
+  "version": "1.0.0",
+  "description": "Lambda handler to replay message from an SQS DLQ",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "test": "tap test/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eoinsha/lambda-dlq-retry.git"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "dlq"
+  ],
+  "author": "Eoin Shanaghy <eoin.shanaghy@fourtheorem.com",
+  "license": "MIT",
+  "dependencies": {},
+  "peedDependencies": {
+    "aws-sdk": "*"
+  },
+  "devDependencies": {}
+}
