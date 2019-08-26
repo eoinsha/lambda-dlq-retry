@@ -61,8 +61,10 @@ function dlqHandlerCreator({handler, log = console}) {
 
         const errorHandler = once(err => reject(err));
         let handlerResult;
+        let handlerError;
         try {
           handlerResult = handler(dlqEvent, {}, (err, result) => {
+            handlerError = err
             if (err) {
               return errorHandler(err);
             }
@@ -72,7 +74,7 @@ function dlqHandlerCreator({handler, log = console}) {
           return errorHandler(err);
         }
 
-        if (handlerResult) {
+        if (handlerResult && !handlerError) {
           if (handlerResult.then && handlerResult.catch) {
             handlerResult.then(successHandler).catch(errorHandler);
           } else {
